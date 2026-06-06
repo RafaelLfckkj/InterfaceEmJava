@@ -1,4 +1,4 @@
-
+import entities.BrazilTaxService;
 import entities.CarRental;
 import entities.Vehicle;
 import java.time.LocalDateTime;
@@ -22,5 +22,10 @@ public class Main {
         LocalDateTime fisish = LocalDateTime.parse(Scan.nextLine(), fmt);
 
         CarRental cr = new CarRental(start, fisish, new Vehicle(carModel));
+
+        BrazilTaxService taxService = new BrazilTaxService();
+        System.out.println(taxService.tax(50.0));
+
+        Scan.close();
     }
 }
